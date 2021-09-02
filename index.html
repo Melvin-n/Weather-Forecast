@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+    <title>Current Weather</title>
+</head>
+<body>
+<div id="container" class="hide">
+    <div id="headContainer">
+        <h4 id="currentCity">Auckland</h4>
+        <h5 id="timedate"><br></h5>
+    </div>  
+    <input type="text" placeholder="Enter another city..." id="userCity" >
+    <button id="enterCity" class="btn" >Enter</button>
+    <h1 id="mainTitle">Weather Forecast</h1>
+    <div id="imagecontainer">
+        <div id="weatherInfo">
+            <h3 id="weather"></h3> 
+            <h3 id="temperature"></h3>
+        </div>
+        <img src="" id="image">
+    </div>
+    <div id="degrees"></div>
+    <div id="day">Today</div>
+    <div id="futurebuttons">
+        <div id="today" class="hide">
+            <button class="btn" id="next3" onclick=getFutureWeather(1)>In 3hrs</button>
+            <button class="btn" id="next6" onclick=getFutureWeather(2)>In 6hrs</button>
+            <button class="btn" id="next9" onclick=getFutureWeather(3)>In 9hrs</button>
+            <button class="btn" id="next12" onclick=getFutureWeather(4)>In 12hrs</button>
+            <button class="btn" id="next15" onclick=getFutureWeather(5)>In 15hrs</button>
+        </div>
+        <div id="tomorrow">
+            
+            <button class="btn" id="next18" onclick=getFutureWeather(6)>In 18hrs</button>
+            <button class="btn" id="next21" onclick=getFutureWeather(7)>In 21hrs</button>
+            <button class="btn" id="next24" onclick=getFutureWeather(8)>In 24hrs</button>
+            <button class="btn" id="next27" onclick=getFutureWeather(9)>In 27hrs</button>
+            <button class="btn" id="next30" onclick=getFutureWeather(10)>In 30hrs</button>
+        </div>
+    </div>
+    <div id="nextprev">
+        <div id="prev" class="hide" onclick=prevDay()>
+            <div id="arrowback"></div>
+            <button class="btn" id="prevbtn">Previous</button>       
+        </div>
+        <div id="next" onclick=nextDay()>
+            <button class="btn" id="tmrwbtn">More</button>
+            <div id="arrow"></div>
+            
+            </div>
+        </div>
+    </div>
+
+    <section id="modalContainer">
+        <div id="modal">
+            <h1 id="startTitle">Weather Forecast</h1>
+
+            <input type="text" id="cityInput" placeholder="Enter your city">
+            <button class="btn" id="begin" onclick="start()">Enter</button>
+        </div>
+    </section>
+    
+
+
+ <script src="script.js"></script>
+
+</body>
+</html>

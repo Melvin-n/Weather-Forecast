@@ -1,0 +1,309 @@
+body {
+    padding: 4.5rem;
+    margin: 0;
+    background: #fdfa58;
+    background: linear-gradient(90deg, #ffb922 0,#5f70f0 58%);
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+
+  }
+  
+  
+  #container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Titillium Web', sans-serif;
+    background:rgba(255, 255, 255, 0.5);
+    width: 400px;
+    border-radius: 5%;
+    text-shadow: 0.5px 0.5px 1px black;
+    height: 90%;
+    border: 1px solid rgba(255, 255, 255, 0.247);
+
+}
+
+#container.hide{
+    visibility: hidden;
+}
+
+#imageContainer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+#image{
+    width: 270px;
+    height: 270px;
+    border: none;
+}
+[src=''] {
+    visibility: hidden;
+}
+
+#weather{
+    color:blue;
+}
+
+#check{
+    border: solid 2px black;
+    width: 90px;
+    height: 45px;
+    transition: background-color 0.5s;
+    cursor: pointer;
+    border-radius: 10%;
+    text-align: center;
+
+}
+
+#check:hover{
+    background-color:rgb(1, 21, 75);
+    transition: background-color 0.5s;
+
+}
+
+
+
+#futurebuttons{   
+    width: 800px;
+    height: 25px;
+    display: flex;   
+    justify-content: center;    
+}
+
+#futurebuttons.hide{
+    visibility:hidden;
+}
+
+#tomorrow{
+    overflow:hidden;
+    position: absolute;
+    justify-self: center;
+    visibility: hidden;    
+}
+
+#tomorrow.show{
+    position:absolute;
+    display: flex;
+    justify-self: center;
+    visibility: visible;
+   
+        
+}
+
+#today{
+    position:absolute;
+    display: flex;
+    justify-self: center;
+    visibility: visible;
+    
+
+}
+#today.hide{
+    overflow:hidden;
+    position: absolute;
+    justify-self: center;
+    visibility: hidden;
+}
+
+
+
+#arrow{
+    width: 18px;
+    height: 18px;
+    border-top: solid 5px black;
+    border-right: solid 5px black;
+    transform: rotate(45deg);
+}
+
+#prevbtn{
+    justify-self: start;
+    grid-row: 3;
+    grid-column: 1;
+    width: 70px;
+    height: 25px;
+    border-radius: 10%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.281);
+    cursor: pointer;
+}
+
+
+
+#tmrwbtn{
+    grid-column: 3;
+    justify-self: start;
+    grid-row: 3;
+    width: 70px;
+    height: 25px;
+    border-radius: 10%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.281);
+    cursor: pointer;
+}
+
+
+#prev{   
+    display: flex;
+    cursor: pointer;
+    grid-column: 1;
+    grid-row: 2;
+    margin-bottom: 5px;
+
+}
+
+#prev.hide{
+    visibility: hidden;
+}
+
+#next{
+    display: flex;
+    cursor: pointer;
+    grid-column: 3;
+    grid-row: 2;
+    margin-bottom: 5px;
+}
+
+#next.hide{
+    visibility: hidden;
+}
+
+
+#arrowback{
+    width: 18px;
+    height: 18px;
+    border-bottom: solid 5px black;
+    border-left: solid 5px black;
+    transform: rotate(45deg);
+}
+
+#tmrwbtn:active{
+    background-color: rgba(112, 112, 112, 0.158);
+}
+
+#tmrwbtn:hover{
+    background-color: rgba(29, 160, 247, 0.747);
+}
+#prevbtn:active{
+    background-color: rgba(112, 112, 112, 0.158);
+}
+
+#prevbtn:hover{
+    background-color: rgba(29, 160, 247, 0.747);
+}
+
+#nextprev{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+button{
+    width: 70px;
+    height: 40px;
+    border-radius: 10%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    
+}
+
+.btn:hover{
+    background-color: rgba(29, 160, 247, 0.747);
+}
+
+.btn:focus{
+    background-color: rgba(112, 112, 112, 0.8)
+}
+
+#modalContainer{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 90vh;
+    
+}
+
+#modalContainer.hide{
+    visibility: hidden;
+}
+#modal{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+}
+
+
+#cityInput{
+    width: 300px;
+    height: 50px;
+    font-size: 40px;;
+    justify-self: center;
+    text-align: center;
+}
+
+#begin{
+    width: 100px;
+    height: 40px;
+    margin-top: 20px;
+    justify-self: center;
+}
+
+input{
+    border-radius: 10%;
+    box-shadow: none;
+    border: none;
+    overflow:hidden;
+    
+}
+
+#enterCity{
+    width: 50px;
+    height: 25px;
+    justify-self: center;
+    margin-top: 5px;
+}
+
+#startTitle{
+    margin-bottom: 100px;
+    font-size: 55px;
+}
+
+#userCity{
+    text-align: center;
+    width: 160px;
+    height: 20px;
+}
+
+#headContainer{
+    display: flex;
+    width: 400px;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+#timedate{
+    margin-left: 50px;;
+}
+
+#currentCity{
+    margin-right: 50px;;
+}
+
+#weatherInfo{
+    display: flex;
+    justify-content: space-around;
+    height: 30px;
+}
+
+#mainTitle{
+    height: 30px;
+}
